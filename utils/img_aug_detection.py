@@ -1,3 +1,7 @@
+'''
+This file contains the code for augmenting images for object detection using the Albumentations library.
+'''
+
 import random
 import cv2
 from matplotlib import pyplot as plt
