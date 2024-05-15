@@ -1,0 +1,8 @@
+train: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Segmentation/yolov9/data/crack_data/train/images
+val: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Segmentation/yolov9/data/crack_data/valid/images
+test: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Segmentation/yolov9/data/crack_data/test/images
+# number of classes
+nc: 1
+
+# class names
+names: ['cracked' ]

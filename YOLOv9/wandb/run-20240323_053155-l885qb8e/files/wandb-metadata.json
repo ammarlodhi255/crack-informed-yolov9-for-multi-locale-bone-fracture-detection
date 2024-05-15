@@ -1,0 +1,82 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.9.13",
+    "heartbeatAt": "2024-03-23T00:31:56.931216",
+    "startedAt": "2024-03-23T00:31:55.496336",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--workers",
+        "8",
+        "--device",
+        "0",
+        "--batch",
+        "16",
+        "--data",
+        "dataset/data.yaml",
+        "--img",
+        "640",
+        "--cfg",
+        "models/detect/yolov9-c.yaml",
+        "--weights",
+        "''",
+        "--name",
+        "yolov9-c",
+        "--hyp",
+        "hyp.scratch-high.yaml",
+        "--min-items",
+        "0",
+        "--epochs",
+        "100",
+        "--close-mosaic",
+        "15"
+    ],
+    "state": "running",
+    "program": "f:\\Other\\Fracture_Work\\yolov9\\train_dual.py",
+    "codePathLocal": "train_dual.py",
+    "codePath": "train_dual.py",
+    "git": {
+        "remote": "https://github.com/WongKinYiu/yolov9.git",
+        "commit": "519346bd88c4e735e5ce9dc4c1a41c7033cc7402"
+    },
+    "email": "Sahitoa97@Gmail.com",
+    "root": "F:/Other/Fracture_Work/yolov9",
+    "host": "DESKTOP-15I4828",
+    "username": "Abdul Manaf",
+    "executable": "c:\\Users\\Abdul Manaf\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3600.0,
+        "min": 0.0,
+        "max": 3600.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3600.0,
+            "min": 0.0,
+            "max": 3600.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 476.42089462280273,
+            "used": 238.74492645263672
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2080 SUPER",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2080 SUPER",
+            "memory_total": 8589934592
+        },
+        {
+            "name": "NVIDIA GeForce RTX 2080 SUPER",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 63.68940734863281
+    }
+}

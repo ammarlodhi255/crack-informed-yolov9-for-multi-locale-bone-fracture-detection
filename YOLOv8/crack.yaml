@@ -1,0 +1,8 @@
+train: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Detection/YOLOV9/dataset/train/images
+val: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Detection/YOLOV9/dataset/valid/images
+test: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Detection/YOLOV9/dataset/test/images
+# number of classes
+nc: 1
+
+# class names
+names: ['crack' ]

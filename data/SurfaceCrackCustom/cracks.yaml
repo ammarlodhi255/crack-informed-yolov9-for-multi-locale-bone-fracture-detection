@@ -1,0 +1,13 @@
+train: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Detection/YOLOV9/dataset/train/images
+val: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Detection/YOLOV9/dataset/valid/images
+test: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Detection/YOLOV9/dataset/test/images
+
+nc: 1
+names: ["crack"]
+
+roboflow:
+  workspace: eth-ujnj0
+  project: damagedetection-0wp6e
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/eth-ujnj0/damagedetection-0wp6e/dataset/2

@@ -1,0 +1,8 @@
+train: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Segmentation/yolov9/data/dataset/FracAtlas Segmentation.v3-without-augmentation.yolov9/train/images
+val: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Segmentation/yolov9/data/dataset/FracAtlas Segmentation.v3-without-augmentation.yolov9/valid/images
+test: /cluster/home/ammaa/Downloads/Ammars/Models/Fracture_Segmentation/yolov9/data/dataset/FracAtlas Segmentation.v3-without-augmentation.yolov9/test/images
+# number of classes
+nc: 1
+
+# class names
+names: ['fractured' ]

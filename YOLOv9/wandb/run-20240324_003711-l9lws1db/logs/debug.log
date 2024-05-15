@@ -1,0 +1,29 @@
+2024-03-24 00:37:11,574 INFO    MainThread:6032 [wandb_setup.py:_flush():76] Current SDK version is 0.16.0
+2024-03-24 00:37:11,574 INFO    MainThread:6032 [wandb_setup.py:_flush():76] Configure stats pid to 6032
+2024-03-24 00:37:11,574 INFO    MainThread:6032 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Abdul Manaf\.config\wandb\settings
+2024-03-24 00:37:11,574 INFO    MainThread:6032 [wandb_setup.py:_flush():76] Loading settings from F:\Other\Fracture_Work\yolov9\wandb\settings
+2024-03-24 00:37:11,574 INFO    MainThread:6032 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-03-24 00:37:11,575 INFO    MainThread:6032 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_dual.py', 'program_abspath': 'F:\\Other\\Fracture_Work\\yolov9\\train_dual.py', 'program': 'F:\\Other\\Fracture_Work\\yolov9\\train_dual.py'}
+2024-03-24 00:37:11,575 INFO    MainThread:6032 [wandb_setup.py:_flush():76] Applying login settings: {'login_timeout': 30}
+2024-03-24 00:37:11,575 INFO    MainThread:6032 [wandb_init.py:_log_setup():524] Logging user logs to F:\Other\Fracture_Work\yolov9\wandb\run-20240324_003711-l9lws1db\logs\debug.log
+2024-03-24 00:37:11,575 INFO    MainThread:6032 [wandb_init.py:_log_setup():525] Logging internal logs to F:\Other\Fracture_Work\yolov9\wandb\run-20240324_003711-l9lws1db\logs\debug-internal.log
+2024-03-24 00:37:11,575 INFO    MainThread:6032 [wandb_init.py:init():564] calling init triggers
+2024-03-24 00:37:11,575 INFO    MainThread:6032 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'weights': "''", 'cfg': 'models/detect/yolov9-c.yaml', 'data': 'dataset/data.yaml', 'hyp': {'lr0': 0.01, 'lrf': 0.01, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 7.5, 'cls': 0.5, 'cls_pw': 1.0, 'obj': 0.7, 'obj_pw': 1.0, 'dfl': 1.5, 'iou_t': 0.2, 'anchor_t': 5.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.9, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.15, 'copy_paste': 0.3}, 'epochs': 100, 'batch_size': 16, 'imgsz': 640, 'rect': False, 'resume': False, 'nosave': False, 'noval': False, 'noautoanchor': False, 'noplots': False, 'evolve': None, 'bucket': '', 'cache': None, 'image_weights': False, 'device': '0', 'multi_scale': False, 'single_cls': False, 'optimizer': 'SGD', 'sync_bn': False, 'workers': 8, 'project': 'runs\\train', 'name': 'yolov9-c', 'exist_ok': False, 'quad': False, 'cos_lr': False, 'flat_cos_lr': False, 'fixed_lr': False, 'label_smoothing': 0.0, 'patience': 100, 'freeze': [0], 'save_period': -1, 'seed': 0, 'local_rank': -1, 'min_items': 0, 'close_mosaic': 15, 'entity': None, 'upload_dataset': False, 'bbox_interval': -1, 'artifact_alias': 'latest', 'save_dir': 'runs\\train\\yolov9-c2'}
+2024-03-24 00:37:11,576 INFO    MainThread:6032 [wandb_init.py:init():614] starting backend
+2024-03-24 00:37:11,576 INFO    MainThread:6032 [wandb_init.py:init():618] setting up manager
+2024-03-24 00:37:11,578 INFO    MainThread:6032 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-03-24 00:37:11,581 INFO    MainThread:6032 [wandb_init.py:init():624] backend started and connected
+2024-03-24 00:37:11,586 INFO    MainThread:6032 [wandb_init.py:init():716] updated telemetry
+2024-03-24 00:37:11,651 INFO    MainThread:6032 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-03-24 00:37:12,741 INFO    MainThread:6032 [wandb_run.py:_on_init():2254] communicating current version
+2024-03-24 00:37:12,942 INFO    MainThread:6032 [wandb_run.py:_on_init():2263] got version response upgrade_message: "wandb version 0.16.4 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-03-24 00:37:12,942 INFO    MainThread:6032 [wandb_init.py:init():800] starting run threads in backend
+2024-03-24 00:37:13,174 INFO    MainThread:6032 [wandb_run.py:_console_start():2233] atexit reg
+2024-03-24 00:37:13,174 INFO    MainThread:6032 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2024-03-24 00:37:13,175 INFO    MainThread:6032 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2024-03-24 00:37:13,175 INFO    MainThread:6032 [wandb_run.py:_redirect():2178] Redirects installed.
+2024-03-24 00:37:13,176 INFO    MainThread:6032 [wandb_init.py:init():841] run started, returning control to user process
+2024-03-24 00:37:13,183 INFO    MainThread:6032 [wandb_run.py:_config_callback():1342] config_cb None None {'data_dict': {'train': 'F:\\Other\\Fracture_Work\\yolov9\\dataset\\train\\images', 'val': 'F:\\Other\\Fracture_Work\\yolov9\\dataset\\valid\\images', 'test': 'F:\\Other\\Fracture_Work\\yolov9\\dataset\\test\\images', 'nc': 1, 'names': {0: 'crack'}, 'roboflow': {'workspace': 'eth-ujnj0', 'project': 'damagedetection-0wp6e', 'version': 2, 'license': 'CC BY 4.0', 'url': 'https://universe.roboflow.com/eth-ujnj0/damagedetection-0wp6e/dataset/2'}, 'path': 'F:\\Other\\Fracture_Work\\yolov9'}}
+2024-03-24 00:57:34,992 WARNING MsgRouterThr:6032 [router.py:message_loop():77] message_loop has been closed

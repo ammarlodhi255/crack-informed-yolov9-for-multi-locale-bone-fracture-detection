@@ -1,0 +1,107 @@
+2024-03-24 00:27:04,597 INFO    StreamThr :21780 [internal.py:wandb_internal():86] W&B internal server running at pid: 21780, started at: 2024-03-24 00:27:04.596117
+2024-03-24 00:27:04,599 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status
+2024-03-24 00:27:04,603 INFO    WriterThread:21780 [datastore.py:open_for_write():85] open: F:\Other\Fracture_Work\yolov9\wandb\run-20240324_002704-jzxc4f5s\run-jzxc4f5s.wandb
+2024-03-24 00:27:04,604 DEBUG   SenderThread:21780 [sender.py:send():380] send: header
+2024-03-24 00:27:04,654 DEBUG   SenderThread:21780 [sender.py:send():380] send: run
+2024-03-24 00:27:04,669 INFO    SenderThread:21780 [sender.py:_maybe_setup_resume():759] checking resume status for None/train/jzxc4f5s
+2024-03-24 00:27:05,665 INFO    SenderThread:21780 [dir_watcher.py:__init__():211] watching files in: F:\Other\Fracture_Work\yolov9\wandb\run-20240324_002704-jzxc4f5s\files
+2024-03-24 00:27:05,666 INFO    SenderThread:21780 [sender.py:_start_run_threads():1124] run started: jzxc4f5s with start time 1711222024.599638
+2024-03-24 00:27:05,689 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: check_version
+2024-03-24 00:27:05,689 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: check_version
+2024-03-24 00:27:05,901 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: run_start
+2024-03-24 00:27:05,944 DEBUG   HandlerThread:21780 [system_info.py:__init__():32] System info init
+2024-03-24 00:27:05,945 DEBUG   HandlerThread:21780 [system_info.py:__init__():47] System info init done
+2024-03-24 00:27:05,945 INFO    HandlerThread:21780 [system_monitor.py:start():194] Starting system monitor
+2024-03-24 00:27:05,945 INFO    SystemMonitor:21780 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-24 00:27:05,946 INFO    HandlerThread:21780 [system_monitor.py:probe():214] Collecting system info
+2024-03-24 00:27:05,951 INFO    SystemMonitor:21780 [interfaces.py:start():190] Started cpu monitoring
+2024-03-24 00:27:05,952 INFO    SystemMonitor:21780 [interfaces.py:start():190] Started disk monitoring
+2024-03-24 00:27:05,954 INFO    SystemMonitor:21780 [interfaces.py:start():190] Started gpu monitoring
+2024-03-24 00:27:05,964 INFO    SystemMonitor:21780 [interfaces.py:start():190] Started memory monitoring
+2024-03-24 00:27:05,972 INFO    SystemMonitor:21780 [interfaces.py:start():190] Started network monitoring
+2024-03-24 00:27:05,993 DEBUG   HandlerThread:21780 [system_info.py:probe():196] Probing system
+2024-03-24 00:27:05,996 DEBUG   HandlerThread:21780 [system_info.py:_probe_git():181] Probing git
+2024-03-24 00:27:06,092 DEBUG   HandlerThread:21780 [system_info.py:_probe_git():189] Probing git done
+2024-03-24 00:27:06,093 DEBUG   HandlerThread:21780 [system_info.py:probe():244] Probing system done
+2024-03-24 00:27:06,093 DEBUG   HandlerThread:21780 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.9.13', 'heartbeatAt': '2024-03-23T19:27:05.993857', 'startedAt': '2024-03-23T19:27:04.588139', 'docker': None, 'cuda': None, 'args': ('--workers', '8', '--device', '0', '--batch', '16', '--data', 'dataset/data.yaml', '--img', '640', '--cfg', 'models/detect/yolov9-c.yaml', '--weights', "''", '--name', 'yolov9-c', '--hyp', 'hyp.scratch-high.yaml', '--min-items', '0', '--epochs', '100', '--close-mosaic', '15'), 'state': 'running', 'program': 'F:\\Other\\Fracture_Work\\yolov9\\train_dual.py', 'codePathLocal': 'train_dual.py', 'codePath': 'train_dual.py', 'git': {'remote': 'https://github.com/WongKinYiu/yolov9.git', 'commit': '519346bd88c4e735e5ce9dc4c1a41c7033cc7402'}, 'email': 'Sahitoa97@Gmail.com', 'root': 'F:/Other/Fracture_Work/yolov9', 'host': 'DESKTOP-15I4828', 'username': 'Abdul Manaf', 'executable': 'C:\\Users\\Abdul Manaf\\AppData\\Local\\Programs\\Python\\Python39\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3600.0, 'min': 0.0, 'max': 3600.0}, 'cpu_freq_per_core': [{'current': 3600.0, 'min': 0.0, 'max': 3600.0}], 'disk': {'/': {'total': 476.42089462280273, 'used': 238.7576026916504}}, 'gpu': 'NVIDIA GeForce RTX 2080 SUPER', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 SUPER', 'memory_total': 8589934592}, {'name': 'NVIDIA GeForce RTX 2080 SUPER', 'memory_total': 8589934592}], 'memory': {'total': 63.68940734863281}}
+2024-03-24 00:27:06,093 INFO    HandlerThread:21780 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-24 00:27:06,093 INFO    HandlerThread:21780 [system_monitor.py:probe():227] Publishing system info
+2024-03-24 00:27:06,093 DEBUG   HandlerThread:21780 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-03-24 00:27:06,095 DEBUG   HandlerThread:21780 [system_info.py:_save_pip():68] Saving pip packages done
+2024-03-24 00:27:06,096 INFO    HandlerThread:21780 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-24 00:27:06,112 DEBUG   SenderThread:21780 [sender.py:send():380] send: files
+2024-03-24 00:27:06,113 INFO    SenderThread:21780 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2024-03-24 00:27:06,121 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:27:06,121 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:27:06,124 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:27:06,432 DEBUG   SenderThread:21780 [sender.py:send():380] send: telemetry
+2024-03-24 00:27:06,432 DEBUG   SenderThread:21780 [sender.py:send():380] send: config
+2024-03-24 00:27:06,676 INFO    Thread-16 :21780 [dir_watcher.py:_on_file_created():271] file/dir created: F:\Other\Fracture_Work\yolov9\wandb\run-20240324_002704-jzxc4f5s\files\requirements.txt
+2024-03-24 00:27:06,676 INFO    Thread-16 :21780 [dir_watcher.py:_on_file_created():271] file/dir created: F:\Other\Fracture_Work\yolov9\wandb\run-20240324_002704-jzxc4f5s\files\output.log
+2024-03-24 00:27:06,676 INFO    Thread-16 :21780 [dir_watcher.py:_on_file_created():271] file/dir created: F:\Other\Fracture_Work\yolov9\wandb\run-20240324_002704-jzxc4f5s\files\wandb-metadata.json
+2024-03-24 00:27:07,270 INFO    wandb-upload_0:21780 [upload_job.py:push():131] Uploaded file C:\Users\ABDULM~1\AppData\Local\Temp\tmpqdkm815iwandb\i00bk2co-wandb-metadata.json
+2024-03-24 00:27:08,678 INFO    Thread-16 :21780 [dir_watcher.py:_on_file_modified():288] file/dir modified: F:\Other\Fracture_Work\yolov9\wandb\run-20240324_002704-jzxc4f5s\files\output.log
+2024-03-24 00:27:10,410 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:27:15,441 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:27:18,770 INFO    Thread-16 :21780 [dir_watcher.py:_on_file_modified():288] file/dir modified: F:\Other\Fracture_Work\yolov9\wandb\run-20240324_002704-jzxc4f5s\files\output.log
+2024-03-24 00:27:19,674 DEBUG   SenderThread:21780 [sender.py:send():380] send: telemetry
+2024-03-24 00:27:19,754 DEBUG   SenderThread:21780 [sender.py:send():380] send: telemetry
+2024-03-24 00:27:20,754 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:27:21,129 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:27:21,129 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:27:21,130 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:27:21,475 DEBUG   SenderThread:21780 [sender.py:send():380] send: telemetry
+2024-03-24 00:27:22,816 INFO    Thread-16 :21780 [dir_watcher.py:_on_file_modified():288] file/dir modified: F:\Other\Fracture_Work\yolov9\wandb\run-20240324_002704-jzxc4f5s\files\output.log
+2024-03-24 00:27:25,820 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:27:30,880 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:27:35,929 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:27:36,145 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:27:36,146 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:27:36,230 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:27:36,955 INFO    Thread-16 :21780 [dir_watcher.py:_on_file_modified():288] file/dir modified: F:\Other\Fracture_Work\yolov9\wandb\run-20240324_002704-jzxc4f5s\files\config.yaml
+2024-03-24 00:27:41,612 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:27:46,646 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:27:51,159 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:27:51,160 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:27:51,161 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:27:52,489 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:27:57,536 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:02,582 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:05,989 DEBUG   SystemMonitor:21780 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-03-24 00:28:05,990 DEBUG   SenderThread:21780 [sender.py:send():380] send: stats
+2024-03-24 00:28:06,160 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:28:06,161 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:28:06,175 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:28:08,467 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:13,503 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:18,539 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:21,161 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:28:21,162 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:28:21,191 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:28:24,442 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:29,473 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:34,535 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:36,004 DEBUG   SenderThread:21780 [sender.py:send():380] send: stats
+2024-03-24 00:28:36,158 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:28:36,159 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:28:36,205 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:28:40,456 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:45,490 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:50,550 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:28:51,161 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:28:51,161 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:28:51,229 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:28:56,551 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:29:01,613 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:29:06,005 DEBUG   SenderThread:21780 [sender.py:send():380] send: stats
+2024-03-24 00:29:06,161 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:29:06,161 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:29:06,207 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:29:07,456 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:29:12,472 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:29:17,526 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:29:21,161 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-24 00:29:21,162 DEBUG   SenderThread:21780 [sender.py:send_request():407] send_request: stop_status
+2024-03-24 00:29:21,208 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-24 00:29:23,459 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
+2024-03-24 00:29:28,520 DEBUG   HandlerThread:21780 [handler.py:handle_request():146] handle_request: status_report
