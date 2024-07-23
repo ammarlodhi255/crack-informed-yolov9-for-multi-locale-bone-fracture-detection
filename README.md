@@ -1,48 +1,56 @@
-# Fracture Detection in Pediatric Wrist Trauma X-ray Images Using YOLOv8 Algorithm
+# Small Data, Big Impact: A Multi-Locale Bone Fracture Localization on an Extremely Limited Dataset Via Crack-Informed YOLOv9 Variants
 
->[Fracture Detection in Pediatric Wrist Trauma X-ray Images Using YOLOv8 Algorithm](https://arxiv.org/abs/2304.05071)
+> [Small Data, Big Impact: A Multi-Locale Bone Fracture Localization on an Extremely Limited Dataset Via Crack-Informed YOLOv9 Variants](https://arxiv.org/abs/??)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/fracture-detection-in-pediatric-wrist-trauma/object-detection-on-grazpedwri-dx)](https://paperswithcode.com/sota/object-detection-on-grazpedwri-dx?p=fracture-detection-in-pediatric-wrist-trauma)
 
 ## Abstract
 
+Automated wrist fracture recognition has become a crucial research area due to the challenge of accurate X-ray interpretation in clinical settings without specialized expertise. With the development of neural networks, YOLO models have
+been extensively applied to fracture detection as computer assisted diagnoses (CAD). However, detection models can struggle when trained on extremely small datasets, which is often the case in medical scenarios. In this study, we utilize an extremely limited fracture dataset and hypothesize that the
+structural similarities between surface cracks and bone fractures can allow YOLOv9 to transfer knowledge effectively. We show that pre-training YOLOv9 on surface cracks rather than on COCO is how YOLO models are typically pre-trained, and fine-tuning it on the fracture dataset yields substantial performance improvements. We also show that knowledge gained from the surface cracks, requires fewer epochs to converge and minimizes overfitting. We achieved state-of-the-art (SOTA) performance on the recent FracAtlas dataset, surpassing the previously established benchmark. Our approach improved the mean average precision (mAP) score by 3%, precision by 5%, and sensitivity by 6%. The implementation code is publicly available at [URL.](https://github.com/ammarlodhi255/Crack-Informed-YOLOv9-For-Multi-Locale-Fracture-Detection)
 
-### YOLOv8 architecture
+### YOLOv9 architecture
+
 <p align="center">
-  <img src="img/figure_details.jpg" width="640" title="details">
+  <img src="img/flow.png" width="640" title="details">
 </p>
 
 ## Citation
+
 If you find our paper useful in your research, please consider citing:
 
     @article{
     }
-    
+
 ## Requirements
-* Linux (Ubuntu)
-* Python = 3.9
-* Pytorch = 1.13.1
-* NVIDIA GPU + CUDA CuDNN
+
+- Linux (Ubuntu)
+- Python = 3.9
+- Pytorch = 1.13.1
+- NVIDIA GPU + CUDA CuDNN
 
 ## Environment
+
 ```
   pip install -r requirements.txt
 ```
 
 ## Dataset
+
 ### Dataset Split
-* FracAtlas Dataset [(Download Link)](https://www.nature.com/articles/s41597-023-02432-4)
-* Download dataset and put images and annotatation into `./FracAtlas/data/Split_Authors/images`, `./FracAtlas/data/Split_Authors/labels`.
+
+- FracAtlas Dataset [(Download Link)](https://www.nature.com/articles/s41597-023-02432-4)
+- Download dataset and put images and annotatation into `./FracAtlas/data/Split_Authors/images`, `./FracAtlas/data/Split_Authors/labels`.
   ```
     python split.py
   ```
-* The dataset is divided into training, validation, and testing set (70-20-10 %) according to the key `patient_id` stored in `dataset.csv`.
-* The script then will move the files into the relative folder as it is represented here below.
-
+- The dataset is divided into training, validation, and testing set (70-20-10 %) according to the key `patient_id` stored in `dataset.csv`.
+- The script then will move the files into the relative folder as it is represented here below.
 
        FracAtlas
-          └── data   
-            └── Split_Authors   
+          └── data
+            └── Split_Authors
                ├── meta.yaml
                ├── images
                │    ├── train
@@ -65,23 +73,26 @@ If you find our paper useful in your research, please consider citing:
                          ├── test_annotation1.txt
                          └── ...
 
-
 The script will create 3 files: `train_data.csv`, `valid_data.csv`, and `test_data.csv` with the same structure of `dataset.csv`.
 
 ### Data Augmentation
-* Data augmentation of the training set using the addWeighted function doubles the size of the training set.
+
+- Data augmentation of the training set using the addWeighted function doubles the size of the training set.
+
 ```
   python imgaug.py --input_img /path/to/input/train/ --output_img /path/to/output/train/ --input_label /path/to/input/labels/ --output_label /path/to/output/labels/
 ```
+
 For example:
+
 ```
   python imgaug.py --input_img ./GRAZPEDWRI-DX/data/images/train/ --output_img ./GRAZPEDWRI-DX/data/images/train_aug/ --input_label ./GRAZPEDWRI-DX/data/labels/train/ --output_label ./GRAZPEDWRI-DX/data/labels/train_aug/
 ```
 
-* The path of the processed file is shown below:
+- The path of the processed file is shown below:
 
        GRAZPEDWRI-DX_dataset
-          └── data   
+          └── data
                ├── meta.yaml
                ├── images
                │    ├── train
@@ -109,12 +120,18 @@ For example:
                     └── test
                          ├── test_annotation1.txt
                          └── ...
-                         
+
+
 ## Model
+
 You can get the open source code of YOLOv8 through [YOLOv8 official GitHub](https://github.com/ultralytics/ultralytics).
+
 ### Train
+
 Before training the model, make sure the path to the data in the `meta.yaml` file is correct.
-* meta.yaml
+
+- meta.yaml
+
 ```
   # patch: /path/to/GRAZPEDWRI-DX/data
   path: 'E:/GRAZPEDWRI-DX/data'
@@ -123,53 +140,58 @@ Before training the model, make sure the path to the data in the `meta.yaml` fil
   test: 'images/test'
 ```
 
-* Arguments
+- Arguments
 
-| Key | Value | Description |
-| :---: | :---: | :---: |
-| model | None | path to model file, i.e. yolov8n.pt, yolov8n.yaml |
-| data | None | path to data file, i.e. coco128.yaml |
-| epochs | 100 | number of epochs to train for |
-| patience | 50 | epochs to wait for no observable improvement for early stopping of training |
-| batch | 16 | number of images per batch (-1 for AutoBatch) |
-| imgsz | 640 | size of input images as integer, i.e. 640, 1024 |
-| save | True | save train checkpoints and predict results |
-| device | None | device to run on, i.e. cuda device=0 or device=0,1,2,3 or device=cpu |
-| workers | 8 | number of worker threads for data loading (per RANK if DDP) |
-| pretrained | True | (bool or str) whether to use a pretrained model (bool) or a model to load weights from (str) |
-| optimizer | 'auto' | optimizer to use, choices=SGD, Adam, Adamax, AdamW, NAdam, RAdam, RMSProp, auto |
-| resume | False | resume training from last checkpoint |
-| lr0 | 0.01 | initial learning rate (i.e. SGD=1E-2, Adam=1E-3) |
-| momentum | 0.937 | 	SGD momentum/Adam beta1 |
-| weight_decay | 0.0005 | optimizer weight decay 5e-4 |
-| val | True | validate/test during training |
+|     Key      | Value  |                                         Description                                          |
+| :----------: | :----: | :------------------------------------------------------------------------------------------: |
+|    model     |  None  |                      path to model file, i.e. yolov8n.pt, yolov8n.yaml                       |
+|     data     |  None  |                             path to data file, i.e. coco128.yaml                             |
+|    epochs    |  100   |                                number of epochs to train for                                 |
+|   patience   |   50   |         epochs to wait for no observable improvement for early stopping of training          |
+|    batch     |   16   |                        number of images per batch (-1 for AutoBatch)                         |
+|    imgsz     |  640   |                       size of input images as integer, i.e. 640, 1024                        |
+|     save     |  True  |                          save train checkpoints and predict results                          |
+|    device    |  None  |             device to run on, i.e. cuda device=0 or device=0,1,2,3 or device=cpu             |
+|   workers    |   8    |                 number of worker threads for data loading (per RANK if DDP)                  |
+|  pretrained  |  True  | (bool or str) whether to use a pretrained model (bool) or a model to load weights from (str) |
+|  optimizer   | 'auto' |       optimizer to use, choices=SGD, Adam, Adamax, AdamW, NAdam, RAdam, RMSProp, auto        |
+|    resume    | False  |                             resume training from last checkpoint                             |
+|     lr0      |  0.01  |                       initial learning rate (i.e. SGD=1E-2, Adam=1E-3)                       |
+|   momentum   | 0.937  |                                   SGD momentum/Adam beta1                                    |
+| weight_decay | 0.0005 |                                 optimizer weight decay 5e-4                                  |
+|     val      |  True  |                                validate/test during training                                 |
 
-* Example
+- Example
+
 ```
   cd Bone_Fracture_Detection_YOLOv8
   yolo train model=yolov8n.pt data=./GRAZPEDWRI-DX/data/meta.yaml epochs=100 batch=16 imgsz=640 save=True device=0 workers=4 pretrained=yolov8n.pt optimizer=SGD lr0=0.01
 ```
 
 ### Trained Model
+
 Use gdown to download the trained model from our GitHub:
+
 ```
   gdown https://github.com/RuiyangJu/Bone_Fracture_Detection_YOLOv8/releases/download/Trained_model/best.pt
 ```
 
-### Validate 
-* Arguments
+### Validate
 
-| Key | Value | Description |
-| :---: | :---: | :---: |
-| data | None | path to data file, i.e. coco128.yaml |
-| imgsz | 640 | size of input images as integer, i.e. 640, 1024 |
-| batch | 16 | number of images per batch (-1 for AutoBatch) |
-| save_json | False | save results to JSON file |
+- Arguments
+
+|     Key     | Value |                           Description                           |
+| :---------: | :---: | :-------------------------------------------------------------: |
+|    data     | None  |              path to data file, i.e. coco128.yaml               |
+|    imgsz    |  640  |         size of input images as integer, i.e. 640, 1024         |
+|    batch    |  16   |          number of images per batch (-1 for AutoBatch)          |
+|  save_json  | False |                    save results to JSON file                    |
 | save_hybrid | False | save hybrid version of labels (labels + additional predictions) |
-| conf | 0.001 | object confidence threshold for detection |
-| iou | 0.6 | intersection over union (IoU) threshold for NMS |
+|    conf     | 0.001 |            object confidence threshold for detection            |
+|     iou     |  0.6  |         intersection over union (IoU) threshold for NMS         |
 
-* CLI
+- CLI
+
 ```
   yolo val model=/path/to/best.pt data=/path/to/meta.yaml
 ```
@@ -190,9 +212,11 @@ Use gdown to download the trained model from our GitHub:
 The prediction examples of our model on the pediatric wrist trauma X-ray images. (a) the manually labeled images, (b) the predicted images.
 
 ## Application
+
 For research project agreement, we don't release APP code, please refer to [YOLOv7 Bone Fracture Detection](https://github.com/mdciri/YOLOv7-Bone-Fracture-Detection) and our paper for details.
 
 ### Fracture Detection Using YOLOv8 App
+
 <p align="center">
   <img src="img/figure_application.jpg" width="1024" title="application">
 </p>
@@ -201,7 +225,7 @@ For research project agreement, we don't release APP code, please refer to [YOLO
 
 <details><summary> <b>Expand</b> </summary>
 
-* [https://github.com/RuiyangJu/Fracture_Detection_Improved_YOLOv8](https://github.com/RuiyangJu/Fracture_Detection_Improved_YOLOv8)
-* [https://github.com/RuiyangJu/YOLOv9-Fracture-Detection](https://github.com/RuiyangJu/YOLOv9-Fracture-Detection)
+- [https://github.com/RuiyangJu/Fracture_Detection_Improved_YOLOv8](https://github.com/RuiyangJu/Fracture_Detection_Improved_YOLOv8)
+- [https://github.com/RuiyangJu/YOLOv9-Fracture-Detection](https://github.com/RuiyangJu/YOLOv9-Fracture-Detection)
 
 </details>
