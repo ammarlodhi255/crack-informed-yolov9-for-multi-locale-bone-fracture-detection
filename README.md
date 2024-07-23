@@ -222,26 +222,8 @@ To download the trained model weights with this link [Crack-Informed-YOLOv9-E-We
   <img src="img/FracAtlas_Comparison.png" width="1024" title="640">
 </p>
 
+### Fracture Detection Using YOLOv9
+
 <p align="center">
   <img src="img/detections.png" width="1024" title="1024">
 </p>
-
-
-## Application
-
-For research project agreement, we don't release APP code, please refer to [YOLOv7 Bone Fracture Detection](https://github.com/mdciri/YOLOv7-Bone-Fracture-Detection) and our paper for details.
-
-### Fracture Detection Using YOLOv8 App
-
-<p align="center">
-  <img src="img/figure_application.jpg" width="1024" title="application">
-</p>
-
-## Related Works
-
-<details><summary> <b>Expand</b> </summary>
-
-- [https://github.com/RuiyangJu/Fracture_Detection_Improved_YOLOv8](https://github.com/RuiyangJu/Fracture_Detection_Improved_YOLOv8)
-- [https://github.com/RuiyangJu/YOLOv9-Fracture-Detection](https://github.com/RuiyangJu/YOLOv9-Fracture-Detection)
-
-</details>
