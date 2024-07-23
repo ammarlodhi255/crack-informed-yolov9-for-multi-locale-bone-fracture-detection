@@ -124,7 +124,7 @@ For example:
 
 ## Model
 
-You can get the open source code of YOLOv8 through [YOLOv8 official GitHub](https://github.com/ultralytics/ultralytics).
+You can get the open source code of YOLOv9 through [YOLOv9 official GitHub](https://github.com/WongKinYiu/yolov9.git).
 
 ### Train
 
@@ -144,7 +144,7 @@ Before training the model, make sure the path to the data in the `meta.yaml` fil
 
 |     Key      | Value  |                                         Description                                          |
 | :----------: | :----: | :------------------------------------------------------------------------------------------: |
-|    model     |  None  |                      path to model file, i.e. yolov8n.pt, yolov8n.yaml                       |
+|    model     |  None  |                      path to model file, i.e. yolov9n.pt, yolov9n.yaml                       |
 |     data     |  None  |                             path to data file, i.e. coco128.yaml                             |
 |    epochs    |  100   |                                number of epochs to train for                                 |
 |   patience   |   50   |         epochs to wait for no observable improvement for early stopping of training          |
@@ -164,17 +164,13 @@ Before training the model, make sure the path to the data in the `meta.yaml` fil
 - Example
 
 ```
-  cd Bone_Fracture_Detection_YOLOv8
-  yolo train model=yolov8n.pt data=./GRAZPEDWRI-DX/data/meta.yaml epochs=100 batch=16 imgsz=640 save=True device=0 workers=4 pretrained=yolov8n.pt optimizer=SGD lr0=0.01
+  cd Bone_Fracture_Detection_YOLOv9
+  yolo train model=yolov9n.pt data=./GRAZPEDWRI-DX/data/meta.yaml epochs=100 batch=16 imgsz=640 save=True device=0 workers=4 pretrained=yolov9n.pt optimizer=SGD lr0=0.01
 ```
 
-### Trained Model
+### Trained Model (Weights)
 
-Use gdown to download the trained model from our GitHub:
-
-```
-  gdown https://github.com/RuiyangJu/Bone_Fracture_Detection_YOLOv8/releases/download/Trained_model/best.pt
-```
+To download the trained model weights with this link [Crack-Informed-YOLOv9-E-Weights.](https://figshare.com/s/153a57f11c1e38933cc4)
 
 ### Validate
 
@@ -198,18 +194,38 @@ Use gdown to download the trained model from our GitHub:
 
 ## Experimental Results
 
+* Performance comparison of variants with and without pre-training on surface cracks.
+
+| Variant  | Default YOLOv9                      |                                     | Crack-Informed YOLOv9                |                                     |
+|----------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+|          | Test mAP@50 | Val mAP@50 | Convergence Ep | Train Time | Test mAP@50 | Val mAP@50 | Convergence Ep | Train Time |
+| M        | 0.38        | 0.44       | 320            | 5.68h      | 0.49        | 0.57       | 123            | 1.89h      |
+| C        | 0.52        | 0.53       | 174            | 2.60h      | 0.53        | 0.58       | 108            | 1.99h      |
+| E        | 0.45        | 0.47       | 174            | 2.69h      | 0.60        | 0.59       | 84             | 1.32h      |
+| GELAN    | 0.43        | 0.52       | 150            | 3.23h      | 0.54        | 0.61       | 174            | 2.22h      |
+| GELAN-C  | 0.37        | 0.60       | 174            | 3.24h      | 0.49        | 0.61       | 151            | 1.65h      |
+| GELAN-E  | 0.50        | 0.59       | 262            | 3.59h      | 0.51        | 0.63       | 177            | 2.10h      |
+----------------
+
+* Evaluation of a single variant YOLOv9-E using different methods.
+
+| # of Training Instances | Method                            | Test mAP@50 | Val mAP@50 | Test Precision | Test Sensitivity |
+|-------------------------|-----------------------------------|-------------|------------|----------------|------------------|
+| 574                     | Default                           | 0.45        | 0.47       | 0.64           | 0.50             |
+| 574                     | **Crack-Informed (Ours)**         | **0.60**    | **0.59**   | **0.89**       | **0.51**         |
+| 574                     | Pre-trained on COCO               | 0.45        | 0.54       | 0.61           | 0.44             |
+| 1148                    | Brightness + Contrast Augmentation [3] | 0.47        | 0.49       | 0.61           | 0.45             |
+| 5740                    | Albumentations Augmentation       | 0.25        | 0.37       | 0.45           | 0.30             |
+
+
 <p align="center">
-  <img src="img/figure_640.jpg" width="1024" title="640">
+  <img src="img/FracAtlas_Comparison.png" width="1024" title="640">
 </p>
 
 <p align="center">
-  <img src="img/figure_1024.jpg" width="1024" title="1024">
+  <img src="img/detections.png" width="1024" title="1024">
 </p>
 
-<p align="center">
-  <img src="img/figure_result.jpg" width="1024" title="result">
-</p>
-The prediction examples of our model on the pediatric wrist trauma X-ray images. (a) the manually labeled images, (b) the predicted images.
 
 ## Application
 
