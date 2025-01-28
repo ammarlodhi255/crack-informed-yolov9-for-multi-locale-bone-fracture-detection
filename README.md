@@ -2,7 +2,7 @@
 
 > [Small Data, Big Impact: A Multi-Locale Bone Fracture Localization on an Extremely Limited Dataset Via Crack-Informed YOLOv9 Variants](https://arxiv.org/abs/??)
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/fracture-detection-in-pediatric-wrist-trauma/object-detection-on-grazpedwri-dx)](https://paperswithcode.com/sota/object-detection-on-grazpedwri-dx?p=fracture-detection-in-pediatric-wrist-trauma)
+[![PWC](https://www.researchgate.net/publication/388135557_Small_Data_Big_Impact_A_Multi-Locale_Bone_Fracture_Detection_on_an_Extremely_Limited_Dataset_Via_Crack-Informed_YOLOv9_Variants)
 
 ## Abstract
 
