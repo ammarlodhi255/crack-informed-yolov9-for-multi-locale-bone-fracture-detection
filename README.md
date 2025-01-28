@@ -1,8 +1,7 @@
 # Small Data, Big Impact: A Multi-Locale Bone Fracture Localization on an Extremely Limited Dataset Via Crack-Informed YOLOv9 Variants
 
-> [Small Data, Big Impact: A Multi-Locale Bone Fracture Localization on an Extremely Limited Dataset Via Crack-Informed YOLOv9 Variants](https://arxiv.org/abs/??)
+> [Small Data, Big Impact: A Multi-Locale Bone Fracture Localization on an Extremely Limited Dataset Via Crack-Informed YOLOv9 Variants](https://www.researchgate.net/publication/388135557_Small_Data_Big_Impact_A_Multi-Locale_Bone_Fracture_Detection_on_an_Extremely_Limited_Dataset_Via_Crack-Informed_YOLOv9_Variants)
 
-[![PWC](https://www.researchgate.net/publication/388135557_Small_Data_Big_Impact_A_Multi-Locale_Bone_Fracture_Detection_on_an_Extremely_Limited_Dataset_Via_Crack-Informed_YOLOv9_Variants)
 
 ## Abstract
 
