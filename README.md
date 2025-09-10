@@ -19,8 +19,14 @@ structural similarities between surface cracks and bone fractures can allow YOLO
 
 If you find our paper useful in your research, please consider citing:
 
-    @article{
-    }
+    @INPROCEEDINGS{10838409,
+        author={Ahmed, Ammar and Manaf, Abdul and Imran, Ali Shariq and Kastrati, Zenun and Daudpota, Sher Muhammad},
+        booktitle={2024 International Conference on Frontiers of Information Technology (FIT)}, 
+        title={Small Data, Big Impact: A Multi-Locale Bone Fracture Detection on an Extremely Limited Dataset Via Crack-Informed YOLOv9 Variants}, 
+        year={2024},
+        pages={1-6},
+        keywords={YOLO;Wrist;Sensitivity;Neural networks;Bones;Surface cracks;Information technology;X-ray imaging;Overfitting;Biomedical imaging;Fracture detection;Medical x-ray   imaging;Transfer learning;YOLOv9;Object detection},
+        doi={10.1109/FIT63703.2024.10838409}}
 
 ## Requirements
 
